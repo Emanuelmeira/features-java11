@@ -15,8 +15,8 @@ public class GeradorDeNotaFiscal {
 
         var nf = new NotaFiscal(valor, this.calculaImpostoSimples(valor));
 
-        enviardorDeEmail.enviaEmail(nf);
-        notaFiscalDao.salva(nf);
+        //enviardorDeEmail.enviaEmail(nf);
+        //notaFiscalDao.salva(nf);
     }
 
     private Double calculaImpostoSimples(Double valor) {

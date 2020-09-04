@@ -38,6 +38,14 @@ public class CollectPrincipal {
     public void collector() {
         var lsNumbers = Arrays.asList(1,2,3,4,5,6,6,6,7,8,9,9);
 
+        //guardar valores em um List
+        lsNumbers.stream()
+                 .filter(x -> x % 2 == 0)
+                 .collect(Collectors.toList())
+                 .forEach(x -> System.out.print(x));
+
+
+
         Map<Boolean , List<Integer>> map = lsNumbers.stream()
                 .map(e -> e * 3) //multiplica os valores do stream por 3
                 .collect(Collectors.groupingBy(e -> e % 2 == 0)); // separa em dois grupos, numeros divididos por 2 e os não divisiveis
