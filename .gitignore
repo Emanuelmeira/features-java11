@@ -19,6 +19,8 @@ logs/
 
 ### IntelliJ IDEA ###
 .idea
+/.idea/
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -33,4 +35,4 @@ build/
 
 ### VS Code ###
 .vscode/
-/.idea/
+
