@@ -19,11 +19,24 @@ public class PersonStream {
         List<PersonStream> list = Arrays.asList(new PersonStream("Emanuel", 20),
                                                 new PersonStream("Aline", 25),
                                                 new PersonStream("Pedro", 30),
-                                                new PersonStream("Carla", 17));
+                                                new PersonStream("Carla", 17),
+                                                new PersonStream("Zael", 10));
         return list;
     }
 
     public Integer getAge(){
         return this.age;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonStream{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

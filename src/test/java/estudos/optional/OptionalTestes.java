@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 import static java.util.Arrays.asList;
 
 @RunWith(JUnit4.class)
-public class OptionalPrincipal {
+public class OptionalTestes {
 
         /**
          * Evitar erros NullPointerException.
