@@ -1,4 +1,4 @@
-package estudos.lambda2;
+package estudos.lambda;
 
 public class Carro {
     private String cor;

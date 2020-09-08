@@ -1,6 +1,7 @@
 package estudos.collect;
 
 
+import estudos.stream.Person;
 import estudos.stream.PersonStream;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -121,12 +122,10 @@ public class CollectsTestes {
                 .stream()
                 .collect(Collectors.partitioningBy(n -> n.getName().startsWith("A"))); //agrupando por nomes que começam com a letra 'A'
         System.out.println(namesStartsWithA);
-
     }
 
-
     @Test
-    public void CollectWithcomparator() {
+    public void CollectWithComparator() {
 
         var lsNumbers = Arrays.asList(1,2,3,4,5,6,6,6,7,8,9,9);
 
@@ -137,16 +136,41 @@ public class CollectsTestes {
                 //.collect(Collectors.maxBy(Comparator.reverseOrder())) organizar inversamente a ordem natural
                 .ifPresent(n -> System.out.println("maior valor" + n));
 
-        System.out.println( "------------------------------ Maior valor com Comparator.comparing() --------------------------------");
+        System.out.println( "------------------------------ Maior valor com Comparator.comparing() implementado -----------------------");
 
-        //TODO completar a implementação do comparing
-//        PersonStream
-//                .getList()
-//                .stream()
-//                .collect(Collectors.maxBy(Comparator.comparing((s1, s2) -> s1. )))
-//                .ifPresent(System.out::println);
+        //implementação do comparing convencional
+        PersonStream
+                .getList()
+                .stream()
+                .collect(Collectors.maxBy(new Comparator<PersonStream>() {
+                    @Override
+                    public int compare(PersonStream o1, PersonStream o2) {
+                        return o1.age.compareTo(o2.getAge());
+                    }
+                }))
+                .ifPresent(System.out::println);
 
+        //implementação do comparing com method Reference
+        PersonStream
+                .getList()
+                .stream()
+                .collect(Collectors.maxBy( (s1,s2) -> s1.age.compareTo(s2.getAge())))
+                .ifPresent(System.out::println);
 
+        //implementação do comparing com method Reference
+        PersonStream
+                .getList()
+                .stream()
+                .collect(Collectors.maxBy( CollectsTestes::compare))
+                .ifPresent(System.out::println);
+
+        var list = Arrays.asList("oi", "obrigado", "bem vindo");
+        list.sort((s1, s2) -> s1.compareTo(s2));
+
+        System.out.println( list);
     }
 
+    private static int compare(PersonStream s1, PersonStream s2){
+        return  s1.age.compareTo(s2.age);
+    }
 }

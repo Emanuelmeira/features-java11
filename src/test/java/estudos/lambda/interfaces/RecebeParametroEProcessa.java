@@ -1,4 +1,4 @@
-package estudos.lambda2.interfaces;
+package estudos.lambda.interfaces;
 
 @FunctionalInterface
 public interface RecebeParametroEProcessa<T> {
