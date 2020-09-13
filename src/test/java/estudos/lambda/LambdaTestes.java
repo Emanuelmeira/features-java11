@@ -60,13 +60,6 @@ public class LambdaTestes {
 
     }
 
-    @Test
-    public void predicateAndBiPredicate(){
-        //TODO predicate e biPredicate
-        //https://youtu.be/-MSlGmFFWyc?t=1398
-
-        //BiPredicate
-    }
 
     @Test
     public void IFRecebeParametroEProcessaAlgo(){
@@ -160,6 +153,5 @@ public class LambdaTestes {
     private static Integer multiplicaPorDois(Integer num){
         return num * 2;
     }
-
 
 }

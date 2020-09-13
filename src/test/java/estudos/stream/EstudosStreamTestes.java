@@ -21,7 +21,7 @@ import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 
 @RunWith(JUnit4.class)
-public class EstudosStream {
+public class EstudosStreamTestes {
 
 
     //TODO falta "sorted"
@@ -140,12 +140,21 @@ public class EstudosStream {
 
     }
 
-    @Test //TODO estudar mais
+    @Test
     public void streamWithReduce() {
 
         //usado para acumulação de valores, não necesariamente precisam ser numericos
 
-        /** O funcionamento do reduce: na primeira interação os dois primeirso numeros são postos nas varievesi n1 e n2 respectivamente,
+        /**
+         * IMPORTANTE: USADO PARA OPERAÇÕES ASSOCIATIVAS (soma, multiplicação etc ..)
+         * (1 + 2) + (3 + 4) = 10  - é associativa
+         * (1 - 2) - (3 - 4) != -8 - não é associativa
+         * quando os valores que estão sendo processados em threads distintas são combinados
+         * apenas valores associativos mantem a integridade.
+         */
+
+        /**
+         * O funcionamento do reduce: na primeira interação os dois primeirso numeros são postos nas varievesi n1 e n2 respectivamente,
          *  uma multiplicação é feita entra os dois e o resultado é guardado em n1, o proximo valor é buscado do stream sendo posto na n2
          *  e assim novamente uma multiplicação é feita, seguindo assim esse fluxo até o fim da stream
          */
@@ -198,8 +207,6 @@ public class EstudosStream {
               .parallel()
               .reduce("", (s1, s2) -> s1.toString().concat(s2.toString() ), //função de acumulação
                                  (n1, n2 ) -> n1.concat(n2)  ); //função de combinação
-
-
     }
 
     @Test

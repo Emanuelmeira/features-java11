@@ -1,7 +1,5 @@
 package estudos.collect;
 
-
-import estudos.stream.Person;
 import estudos.stream.PersonStream;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,8 +11,6 @@ import java.util.Comparator;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 @RunWith(JUnit4.class)
