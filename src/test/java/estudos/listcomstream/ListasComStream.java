@@ -15,6 +15,7 @@ public class ListasComStream {
     @Test
     public void recursosEmListas() {
 
+
         //var lsInteger = Arrays.asList(1,2,3,4,5,6,7,8,9); retorna uma lista com "fixed-size" não permitindo algumas alterações na lista
         List<Integer> lsInteger = new ArrayList<>();
 
