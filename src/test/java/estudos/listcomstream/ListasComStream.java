@@ -3,6 +3,7 @@ package estudos.listcomstream;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+import solid.s.acoplamento.antigo.Fatura;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -84,5 +85,25 @@ public class ListasComStream {
         map.forEach((k, v) -> System.out.println(k + v));
 
     }
+
+    @Test
+    public void e() {
+
+        Long numb = 100l;
+
+        if(numb % 100 == 0l){
+            System.out.println("------teste------");
+        }
+
+        var a = new Fatura();
+        a.valor = 10d;
+
+        System.out.println("---" +a.valor.getClass().getName() );
+        System.out.println("---" +a.valor.getClass().getSimpleName());
+        System.out.println("---" +a.valor. );
+
+
+    }
+
 
 }
