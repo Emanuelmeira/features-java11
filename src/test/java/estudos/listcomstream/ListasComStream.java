@@ -86,24 +86,7 @@ public class ListasComStream {
 
     }
 
-    @Test
-    public void e() {
 
-        Long numb = 100l;
-
-        if(numb % 100 == 0l){
-            System.out.println("------teste------");
-        }
-
-        var a = new Fatura();
-        a.valor = 10d;
-
-        System.out.println("---" +a.valor.getClass().getName() );
-        System.out.println("---" +a.valor.getClass().getSimpleName());
-        System.out.println("---" +a.valor. );
-
-
-    }
 
 
 }
