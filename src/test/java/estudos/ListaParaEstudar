@@ -1,11 +1,9 @@
 
 
-
 1. Recursos novos do Java
 2. SOLID
 3. Ferramental (menssageria =rabbit, kafka, docker, Mongo)
 6. Teste de Stress
-
 7. Aprender com projetos open sources
 
 Ler:
@@ -14,3 +12,21 @@ Clean Code,
 Refactoring escrito por Martin Fowler,
 Domain Driven Design, Eric Evans
 
+        //TODO usar class com parametro generico extendendo comparator
+        //TODO criar e implementar interfaces
+        //TODO criar class POJO e implementar o comparator dela
+        //TODO fazer o teste com as funções de recursão (desenhando)
+        //TODO testes iquals e hasCode
+        //TODO Reflection
+        //TODO pegar objetos que tem uma anotação
+
+
+        //TODO fazer anotação https://www.devmedia.com.br/entendendo-anotacoes-em-java/26772#:~:text=Agora%20que%20sabemos%20o%20quanto,formato%20de%20pares%20nome%3Dvalor.
+
+
+        //TODO usar try-with-resources
+        //TODO sobscrever metodos de class pai
+        //TODO fazer fatorial
+        //TODO fazer sequencia de fibo
+        //TODO fazer teste com a tabela hash, adc objeto, depois modificando atributo do mesmo e buscanbdo dentro do set
+        //TODO testes com metodo statics

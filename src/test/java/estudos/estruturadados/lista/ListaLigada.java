@@ -48,6 +48,20 @@ public class ListaLigada<T> {
         this.tamanho++;
     }
 
+    public void adicionarComeco(T novoValor){
+
+        var novoElemento = new Elemento<T>(novoValor);
+        if(this.primeiro == null && this.ultimo == null ){
+            this.primeiro = novoElemento;
+            this.ultimo = novoElemento;
+        }else {
+            novoElemento.setProximo(this.primeiro);
+            this.primeiro = novoElemento;
+        }
+
+        this.tamanho++;
+    }
+
     public void remover(T valorProcurado){
         var atual = this.primeiro;
         Elemento<T> anterior = null;

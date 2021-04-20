@@ -419,6 +419,29 @@ public class ListaTeste {
         }
     }
 
+
+    @Test
+    public void lendoLinkedList(){
+
+        ListaLigada<Integer> num = new ListaLigada<>();
+
+        num.adicionar(1);
+        num.adicionar(2);
+        num.adicionar(3);
+        num.adicionar(4);
+        num.adicionar(5);
+
+        imprimirComRecursao(num.getPrimeiro());
+
+    }
+
+    private void imprimirComRecursao(Elemento<Integer> elemento) {
+        if(elemento != null){
+            System.out.println(elemento.getValor());
+            imprimirComRecursao(elemento.getProximo());
+        }
+    }
+
     enum Nipe{
         ESPADAS,
         PAUS,

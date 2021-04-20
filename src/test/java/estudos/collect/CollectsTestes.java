@@ -146,7 +146,7 @@ public class CollectsTestes {
                 }))
                 .ifPresent(System.out::println);
 
-        //implementação do comparing com method Reference
+        //implementação do comparing com lambda
         PersonStream
                 .getList()
                 .stream()
