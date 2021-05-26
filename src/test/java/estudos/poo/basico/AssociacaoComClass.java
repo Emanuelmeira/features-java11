@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * https://youtu.be/6FJ5usl7uTw
  */
 @RunWith(JUnit4.class)
-public class Associacao {
+public class AssociacaoComClass {
 
     @Test
     public void teste() {

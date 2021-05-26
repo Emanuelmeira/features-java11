@@ -1,9 +1,14 @@
 package estudos.poo;
 
+import java.io.File;
+
 public class Testesss {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args)  {
 
-        Class.forName("java.estudos.poo.Testesss");
+        String path = "solid.o.calculaimposto".replace('.', '/');
+        File directory = new File(path);
+        if(directory.isDirectory())
+            System.out.println("é");
     }
 }

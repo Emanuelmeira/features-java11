@@ -291,33 +291,51 @@ public class Reflection {
     public enum Area { RH, FINANCEIRO, TI; }
 
     @Test
-    public void testessssssssssssssssssss() throws ClassNotFoundException, URISyntaxException {
+    public void lerClassesDoProjetoComAnotacoes() throws ClassNotFoundException, URISyntaxException {
 
-        //implementandoReflection("src.test.java.estudos");
+        var classes = implementandoReflection("src.test.java.estudos");
 
-        var a = ClassLoader.getSystemClassLoader();// SystemResource("estudos.poo.reflection");
-        var b = a.getDefinedPackage("estudos.poo.reflection");
+        classes.stream().forEach(clazz -> {
+            if(clazz.isAnnotationPresent(RunWith.class)){
 
-        //Class.forName("C:/Users/Emmit/Documents/projetos/estudos-java11/src/test/java/estudos/collect/CollectsTestes.java");
-        //Class.forName("src/test/java/estudos/collect/CollectsTestes.java");
-        //Class.forName("src.test.java.estudos.collect.CollectsTestes.java");
+                Arrays.stream(clazz.getDeclaredMethods()).forEach(method -> {
+                    if(method.isAnnotationPresent(Test.class) ){
+                        System.out.println("Nome: "+method.getName() );
+                    }
 
+                    if(method.isAnnotationPresent(DOING.class) ){
+                        var anotation = method.getDeclaredAnnotation(DOING.class);
+
+                        String responsaveis = "";
+                        for(var resp: anotation.antigosResponsaveis()){
+                            responsaveis = responsaveis.concat(resp+" ");
+                        }
+
+                        System.out.println("\n\nNome: "+method.getName() +" Anotação: " +DOING.class.getSimpleName() );
+                        System.out.println("Area: " +anotation.area().name() +" " +anotation.novoResponsavel() );
+                        System.out.println("Novo responsavel: " +anotation.novoResponsavel() );
+                        System.out.println("Antigos responsavel: " +responsaveis );
+                        System.out.println("Class da tarefa: " +anotation.classTarefa().getSimpleName() +"\n\n");
+                    }
+                });
+            }
+        });
     }
 
     @SuppressWarnings({"rawtypes"})
-    private void implementandoReflection(String packageName) throws ClassNotFoundException {
+    private ArrayList<Class> implementandoReflection(String packageName) throws ClassNotFoundException {
 
         String path = packageName.replace('.', '/');
         File directory = new File(path);
 
         ArrayList<Class> classes = new ArrayList<>();
-        classes.addAll(findClasses(directory, packageName));
+        classes.addAll(findClasses(directory, packageName.substring(packageName.lastIndexOf(".")+1)));
 
-        System.out.println(classes.size());
+        return classes;
     }
 
     private static List<Class> findClasses(File directory, String packageName) throws ClassNotFoundException {
-        List<Class> classes = new ArrayList<Class>();
+        List<Class> classes = new ArrayList<>();
         if (!directory.exists()) {
             return classes;
         }
@@ -327,17 +345,13 @@ public class Reflection {
                 assert !file.getName().contains(".");
                 classes.addAll(findClasses(file, packageName + "." + file.getName()));
             } else if (file.getName().endsWith(".java")) {
-
-                file.getPath();
-
-
                 classes.add(Class.forName(packageName + '.' + file.getName().substring(0, file.getName().length() - 5)));
             }
         }
         return classes;
     }
 
-    //TODO pegar todas as classes que anotações do projeto e fazer verificações
+
 }
 
 

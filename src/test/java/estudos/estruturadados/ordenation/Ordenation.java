@@ -48,7 +48,7 @@ public class Ordenation {
             numeros[i] = (int) (Math.random() * 10);
             System.out.println("" + numeros[i]);
         }
-        System.out.println("\n\n ----------------------------");
+        System.out.println("\n----------------------------");
 
         int aux, j;
         for(int i=1; i<numeros.length; i++){

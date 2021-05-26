@@ -7,7 +7,7 @@
 7. Aprender com projetos open sources
 
 Ler:
-SOLID para ninjas, casa do codigo
+SOLID para ninjas, casa do codigo,
 Clean Code,
 Refactoring escrito por Martin Fowler,
 Domain Driven Design, Eric Evans
@@ -19,14 +19,51 @@ Domain Driven Design, Eric Evans
         //TODO testes iquals e hasCode
         //TODO Reflection
         //TODO pegar objetos que tem uma anotação
-
-
         //TODO fazer anotação https://www.devmedia.com.br/entendendo-anotacoes-em-java/26772#:~:text=Agora%20que%20sabemos%20o%20quanto,formato%20de%20pares%20nome%3Dvalor.
-
-
-        //TODO usar try-with-resources
-        //TODO sobscrever metodos de class pai
         //TODO fazer fatorial
         //TODO fazer sequencia de fibo
         //TODO fazer teste com a tabela hash, adc objeto, depois modificando atributo do mesmo e buscanbdo dentro do set
+        //TODO abstract class https://www.journaldev.com/1582/abstract-class-in-java
+        //TODO para que serve os metodos wait() da class https://howtodoinjava.com/java/multi-threading/wait-notify-and-notifyall-methods/
+        //TODO estudar oq é thread safe (synchronized) | criar collections.synchronized  | https://howtodoinjava.com/java/multi-threading/wait-notify-and-notifyall-methods/
+        //TODO agendar tarefas em java em dias especificos de forma simples TimeTask
+        //TODO operadores aritimeticos java
+        //TODO operadores logicos java
         //TODO testes com metodo statics
+        //TODO o que é e como funciona interator
+        //TODO usar try-with-resources
+        //TODO fazer resumo das collections, hashMap, hashTable, HashSet, TreeMap, set, arraylist, linkedinList
+        //TODO conectar ao twitter https://www.baeldung.com/twitter4j
+        //TODO pq lambda força o uso de atomic class ??? https://www.javahabit.com/2016/06/16/understanding-java-8-lambda-final-finally-variable/
+
+
+        //TODO estudar logica
+
+
+        //TODO estudar a capacidade do ArrayList e seu redimensionamento quando fica grande ( o quão lento isso é ) ensureCapacity();
+        //TODO estudar modificadores transient e volatile https://pt.stackoverflow.com/questions/116047/qual-a-finalidade-do-transient-e-volatile-no-java
+        //TODO criar um processador de anotação https://www.javacodegeeks.com/2015/09/java-annotation-processors.html
+        //TODO java 8 https://dzone.com/articles/all-things-java-8
+        //TODO estudar entrySet() -> "hashMap.entrySet()"
+
+
+        UUID.randomUUID();
+
+        //TODO estudar fluxo Oauth 1 e 2
+        API Key: Sx02poxj6kbig32GhGNVfJsRv
+        API Secret Key: a559liY2nVNMZrYUPYEyh0aogW2yqFKN6aQapJ5xseRX4ps3t3
+        Bearer token: AAAAAAAAAAAAAAAAAAAAAL5UCAEAAAAAOUlb5YvNdWcEcp2R%2FMIhk8BH6VY%3DHHA2bwSl2Db27TCHZ0jGcXkwRrBZ0GnP7latbuyEgCxiB2EQPl
+        access token: 1049255870457139201-4N8YfwUYvLfu3Es6t43NdCAq7bvrKK
+        access token secret: 9EtTt5oBDaW6EZreORWbob6vpoGNvNN6vjRvK0QLu7oal
+
+        //TODO Specifications com Spring Data
+
+        //-----------------------------------------------------
+        Exercicios de logica
+        https://fit.faccat.br/~fpereira/apostilas/exerc_resp_alg_mar2007.pdf
+        http://devfuria.com.br/logica-de-programacao/
+        http://nbcgib.uesc.br/nbcgib/files/LP-I/LP-I-listaExercicios-01.pdf
+        //https://www.questoesestrategicas.com.br/questoes/busca/assunto/logicas-de-programacao
+
+
+

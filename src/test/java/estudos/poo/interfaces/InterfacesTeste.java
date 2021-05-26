@@ -32,6 +32,11 @@ public class InterfacesTeste {
         default boolean ativa(){
             return true;
         }
+
+        //interfaces podem ter metodos staticos com corpo java8+
+        static void contador() {
+
+        }
     }
 
     interface ImpressoraMultifuncional{
