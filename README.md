@@ -1,2 +1,2 @@
-# estudos-java11
+# features-java11
 Exemplos práticos de funcionalidades da versão 11 do Java.
