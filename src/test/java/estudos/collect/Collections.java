@@ -5,7 +5,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
+
+import static java.util.Arrays.asList;
 
 @RunWith(JUnit4.class)
 public class Collections {
@@ -23,7 +25,65 @@ public class Collections {
         arrayList.add(2);
 
         imprimir(arrayList.iterator());
+    }
 
+    @Test
+    public void t(){
+      //  System.out.println(fn(7));
+
+
+        //1)Desenvolva um algoritmo que, para cada número inteiro dentro do intervalo fechado entre 0 e 16, imprima:
+        //o"foo" se o número for divisível por 3
+        //o"bar" se o número for divisível por 5
+        //o"baz" se o número for divisível por 3 e por 5
+        //o próprio número caso contrario
+
+//        for (int i=0; i<= 16; i++ ){
+//
+//            if(i % 3 == 0 && i % 5 == 0 )
+//                System.out.println("foo");
+//            else if(i % 3 == 0)
+//                System.out.println("bar");
+//            else if(i % 5 == 0)
+//                System.out.println("baz");
+//            else
+//                System.out.println(i);
+//        }
+        //2)Implemente um algoritmo que receba como entrada uma sequência de Strings –
+        // que podem ou não apresentar repetições – e imprima, uma única vez para cada termo,
+        // a quantidade de vezes em que o mesmo foi encontrado.
+        //
+        //Obs: a formatação da saída é livre.
+        //
+        //Ex:
+        //Entrada: ["PaTiNeTe", "SKATE", "Patinete", "BicicletA"]
+        //Saída:
+        //skate=1 patinete=2 bicicleta=1
+
+        var stringList = asList("PaTiNeTe", "SKATE", "Patinete", "BicicletA");
+        printFrequencyOfWord(stringList);
+    }
+
+    public void printFrequencyOfWord(List<String> stringList){
+        var stringListLowerCase = stringList.stream()
+                .map(String::toLowerCase)
+                .collect(Collectors.toList());
+
+        var stringSet = new HashSet<>(stringListLowerCase);
+
+        stringSet.forEach(word -> {
+           // System.out.println(word+" - "+Collections.frequency(stringListLowerCase, word));
+        });
+    }
+
+
+    public int fn(int v){
+        if(v==1 || v==0)
+            return 1;
+        if(v%2==0)
+             return fn(v/2)+2;
+        else
+             return fn(v-1)+3;
     }
 
     @Test

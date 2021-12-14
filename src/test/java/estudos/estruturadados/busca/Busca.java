@@ -40,6 +40,7 @@ public class Busca {
         }else{
             System.out.println("numero não encontrado");
         }
+
     }
 
     /**
